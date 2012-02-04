@@ -1,0 +1,33 @@
+ddCarousel:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [name]
+  columns:
+    name:
+      type: string
+      notnull: true
+    image_path:
+      type: string
+ddCarouselImage:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [caption]
+  columns:
+    file_name:
+      type: string
+      notnull: true
+    caption:
+      type: string
+      default: <?php echo now() ?>
+    url:
+      type: string
+    carousel_id:
+      type: integer
+      notnull: true
+  relations:
+    Carousel:
+      foreign: id
+      local: carousel_id
+      class: ddCarousel

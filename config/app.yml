@@ -1,0 +1,15 @@
+all:
+  ddDoctrineCarouselPlugin:
+    settings_start:          1     # where should the carousel start?
+    settings_display:        1     # how many blocks do you want to move at a time?
+    settings_axis:           'x'   # vertical or horizontal scroller? 'x' or 'y' .
+    settings_controls:       true  # show left and right navigation buttons?
+    settings_pager:          false # is there a page number navigation present?
+    settings_interval:       false # move to the next block on interval.
+    settings_intervaltime:  3000  # interval time in milliseconds.
+    settings_animation:      true  # false is instant, true is animate.
+    settings_duration:       1000  # how fast must the animation move in milliseconds?
+    settings_callback:       null  # function that executes after every move
+    
+    config_web_dir:          /ddDoctrineCarouselPlugin
+    
